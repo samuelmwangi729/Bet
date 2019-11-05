@@ -1,3 +1,26 @@
+<style>
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1b1829;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {display: block;}
+#contactForm{
+    length:20px !important;
+}
+</style>
 <header class="header-section" id="header-section" style="background-color:#1b1829">
         <div class="header-top">
             <div class="container">
@@ -35,7 +58,7 @@
                             </li>
                             <li class="header-left-list" class="contact-form">
                                     <span class="header-left-icon" style="padding-top:-20px">
-                                        {{Form::open(['action'=>'SearchController@store','method'=>'POST','class'=>'form-inline contact-form-aqua','id'=>'contactForm'])}}
+                                        {{Form::open(['action'=>'SearchController@store','method'=>'POST','class'=>'form-inline contact-form-aqua search_form','id'=>'contactForm'])}}
                                             {{Form::text('search','',['class' => 'form-control contact-frm active','placeholder'=> 'Enter Your Query Here'])}}&nbsp;&nbsp;&nbsp;
                                             {{Form::submit('Search',['class' => 'btn btn-success btn-md'])}}
                                         {{Form::close()}}
@@ -85,15 +108,23 @@
                 <div class="collapse navbar-collapse nav-main justify-content-end" id="navbarNav">
                     <ul class="navbar-nav" id="primary-menu">
                         <li class="nav-item active">
-                            <a class="nav-link active" href="#header-section" title="Available Games to Stake On">SPORT
-                                <span class="sr-only">(current)</span>
-                            </a>
+                                <div class="dropdown">
+                                        <a class="dropbtn nav-link">Sport</a>
+                                        <div class="dropdown-content">
+                                          <a class="nav-link" href="/Soccer">Soccer</a>
+                                          <a class="nav-link" href="/Volleyball">VolleyBall</a>
+                                          <a class="nav-link" href="/Tennis">Tennis</a>
+                                          <a class="nav-link" href="/Cricket">Cricket</a>
+                                          <a class="nav-link" href="/Soccer">Rugby</a>
+                                          <a class="nav-link" href="/Tennis">Base Ball</a>
+                                          <a class="nav-link" href="/Cricket">Racing</a>
+                                        </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about-section" title="View Live Games">LIVE</a>
+                            <a class="nav-link" href="/Live" title="View Live Games">LIVE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#affiliate-section" title="Learn About Available Promotions">PROMO</a>
+                            <a class="nav-link" href="/Highlights" title="View Today Highlights">HIGHLIGHTS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#investment-section" title="How to Bet">BETTING</a>
@@ -102,10 +133,10 @@
                             <a class="nav-link" href="#" title="Cash Out Policy">PAYMENTS</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="#" title="Head To Head Stats on Live Games">STATISTICS</a>
+                                <a class="nav-link" href="/Statistics" title="Head To Head Stats on Live Games">STATISTICS</a>
                             </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact-us-section" title="Completed Match Results">RESULTS</a>
+                            <a class="nav-link" href="/Results" title="Completed Match Results">RESULTS</a>
                         </li>
                         <li class="nav-item">
                                 <a class="nav-link" href="#contact-us-section" title="Our Money Back Policy">RETURNS</a>

@@ -1,5 +1,6 @@
 @extends('layouts.baseLayout')
 <!-- contact-us section begin -->
+@section('content')
 <section class="contact-us-section" id="contact-us-section">
         <div class="container" style="padding-top:90px">
             <div class="row d-flex justify-content-center">
@@ -34,4 +35,5 @@
             </div>
         </div>
     </section>
+    @endsection
     <!-- contact-us section end -->

@@ -19,5 +19,14 @@ Route::get('/Contact','ContactController@index');
 Route::get('/login','LoginController@index');
 Route::get('/Account','AccountController@index');
 Route::resource('Search', 'SearchController');
+Route::get('/Soccer','testController@index');
 
 Auth::routes();
+Route::get('/Results','ResultsController@index');
+Route::get('/Statistics','StatisticsController@index');
+Route::get('/Live','LiveController@index');
+Route::get('/Promo','PromoController@index');
+Route::get('/Fetch/{gameId}/{sport}/{Home}/{Odd}/{Nature}','fetchController@index')->name('fetch');
+Route::get('/Statistics','StatisticsController@index');
+Route::get('/Highlights','HighlightController@index');
+

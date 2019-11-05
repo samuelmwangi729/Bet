@@ -8,16 +8,16 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{config('app.name')}}</title>
+    <script src="{{ asset('js/app.js') }}" defer></script>
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{{asset('img/favicon.png')}}">
         <!-- Styles -->
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="{{asset('css/icofont.min.css')}}" rel="stylesheet">
         <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
-        <link href="{{asset('css/app.css')}}" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{asset('css/app1.css')}}" rel="stylesheet">
         <link href="{{asset('css/appp.css')}}" rel="stylesheet">
-        <link href="{{asset('fontawesome/all.min.css')}}" rel="stylesheet">
         <link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
         <link rel="stylesheet" href="vendors/base/vendor.bundle.base.css">
         <!-- endinject -->
@@ -42,7 +42,7 @@
 
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/app1.js')}}"></script>
 <script src="{{ asset('js/appp.js') }}" defer></script>
 
   <!-- plugins:js -->

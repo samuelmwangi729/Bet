@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@include('inc.messages')
 @section('content')
 <section class="contact-us-section" id="contact-us-section">
 <div class="container">
