@@ -1,4 +1,3 @@
-@extends('layouts.baseLayout')
 @extends('layouts.app')
 <!--Start Preloader-->
 <div class="preloader" id="preloader"></div>

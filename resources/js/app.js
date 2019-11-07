@@ -23,6 +23,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('main-component',require('./components/MainComponent.vue'));
 Vue.component('volleyball-component',require('./components/VolleyBallComponent.vue').default)
 Vue.component('statistics-component',require('./components/StatisticsComponent.vue').default)
+Vue.component('live-component',require('./components/LiveComponent.vue').default)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

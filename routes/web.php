@@ -29,4 +29,5 @@ Route::get('/Promo','PromoController@index');
 Route::get('/Fetch/{gameId}/{sport}/{Home}/{Odd}/{Nature}','fetchController@index')->name('fetch');
 Route::get('/Statistics','StatisticsController@index');
 Route::get('/Highlights','HighlightController@index');
+Route::get('/Volleyball','VolleyballController@index');
 
