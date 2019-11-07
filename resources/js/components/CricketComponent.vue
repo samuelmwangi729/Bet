@@ -26,7 +26,10 @@
             axios.get('https://app.oddsapi.io/api/v1/odds?sport=cricket&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d')
             .then(response =>{
                 this.fixtures=response.data;
-                console.log(response.data)
+                var i;
+                for(i=0;i<response.data.length;i++){
+                     console.log(response.data[i].sites)
+                }
             }).catch(error =>{
                 console.log("Error", error)
             });

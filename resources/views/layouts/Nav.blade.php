@@ -112,12 +112,9 @@
                                         <a class="dropbtn nav-link">Sport</a>
                                         <div class="dropdown-content">
                                           <a class="nav-link" href="/Soccer">Soccer</a>
-                                          <a class="nav-link" href="/Volleyball">VolleyBall</a>
                                           <a class="nav-link" href="/Tennis">Tennis</a>
                                           <a class="nav-link" href="/Cricket">Cricket</a>
-                                          <a class="nav-link" href="/Soccer">Rugby</a>
-                                          <a class="nav-link" href="/Tennis">Base Ball</a>
-                                          <a class="nav-link" href="/Cricket">Racing</a>
+                                          <a class="nav-link" href="/Rugby">Rugby</a>
                                         </div>
                         </li>
                         <li class="nav-item">

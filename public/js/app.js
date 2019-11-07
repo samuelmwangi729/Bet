@@ -1829,6 +1829,53 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CricketComponent.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CricketComponent.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      fixtures: [],
+      home: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var self = this;
+    axios.get('https://app.oddsapi.io/api/v1/odds?sport=cricket&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
+      _this.fixtures = response.data;
+      var i;
+
+      for (i = 0; i < response.data.length; i++) {
+        console.log(response.data[i].sites);
+      }
+    })["catch"](function (error) {
+      console.log("Error", error);
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -1958,6 +2005,89 @@ __webpack_require__.r(__webpack_exports__);
     var self = this;
     axios.get('https://app.oddsapi.io/api/v1/odds?sport=soccer&country=europe&league=soccer-europe-europa-league&apikey=f4b7f540-fa2c-11e9-a8e3-51b3476555d8').then(function (response) {
       _this.fixtures = response.data;
+    })["catch"](function (error) {
+      console.log("Error", error);
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RugbyComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RugbyComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      fixtures: [],
+      home: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var self = this;
+    axios.get('https://app.oddsapi.io/api/v1/odds?sport=rugby-union&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
+      _this.fixtures = response.data;
+      console.log(response.data);
+    })["catch"](function (error) {
+      console.log("Error", error);
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TennisComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TennisComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      fixtures: [],
+      home: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var self = this;
+    axios.get('https://app.oddsapi.io/api/v1/odds?sport=tennis&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
+      _this.fixtures = response.data;
+      console.log(response.data);
     })["catch"](function (error) {
       console.log("Error", error);
     });
@@ -37300,6 +37430,43 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CricketComponent.vue?vue&type=template&id=3523b712&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CricketComponent.vue?vue&type=template&id=3523b712& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "table",
+    {
+      staticClass: "table",
+      staticStyle: { "font-size": "10px" },
+      attrs: { cellspacing: "5" }
+    },
+    _vm._l(_vm.fixtures, function(fixture) {
+      return _c("tr", { key: fixture.id }, [
+        _vm._v("\n         " + _vm._s(fixture.sites.homeaway) + "\n         ")
+      ])
+    }),
+    0
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -37707,6 +37874,144 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RugbyComponent.vue?vue&type=template&id=0c12578d&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RugbyComponent.vue?vue&type=template&id=0c12578d& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "table",
+    {
+      staticClass: "table ml-auto",
+      staticStyle: { "font-size": "10px" },
+      attrs: { cellspacing: "5" }
+    },
+    _vm._l(_vm.fixtures, function(fixture) {
+      return _c("tr", { key: fixture.id }, [
+        _c("th", [
+          _vm._v(
+            "ID:" +
+              _vm._s(fixture.event.home) +
+              " Vs. " +
+              _vm._s(fixture.event.away) +
+              " "
+          ),
+          _c("br"),
+          _vm._v(
+            _vm._s(fixture.event.start_time) +
+              "  " +
+              _vm._s(fixture.league.name)
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "300px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.home +
+                  "/" +
+                  fixture.sites["1x2"]["1xbet"].odds["1"] +
+                  "/Home"
+              }
+            },
+            [
+              _vm._v(
+                _vm._s(fixture.event.home) +
+                  " " +
+                  _vm._s(fixture.sites["1x2"]["1xbet"].odds["1"])
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "300px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sites["1x2"]["1xbet"].odds["X"] +
+                  "/Draw"
+              }
+            },
+            [_vm._v(" Draw " + _vm._s(fixture.sites["1x2"]["1xbet"].odds["X"]))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "300px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sites["1x2"]["1xbet"].odds["2"] +
+                  "/Away"
+              }
+            },
+            [
+              _vm._v(
+                _vm._s(fixture.event.away) +
+                  " " +
+                  _vm._s(fixture.sites["1x2"]["1xbet"].odds["2"])
+              )
+            ]
+          )
+        ])
+      ])
+    }),
+    0
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/StatisticsComponent.vue?vue&type=template&id=3ec93802&":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/StatisticsComponent.vue?vue&type=template&id=3ec93802& ***!
@@ -37746,6 +38051,119 @@ var staticRenderFns = [
     )
   }
 ]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TennisComponent.vue?vue&type=template&id=2a521472&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/TennisComponent.vue?vue&type=template&id=2a521472& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "table",
+    {
+      staticClass: "table",
+      staticStyle: { "font-size": "10px" },
+      attrs: { cellspacing: "5" }
+    },
+    _vm._l(_vm.fixtures, function(fixture) {
+      return _c("tr", { key: fixture.id }, [
+        _c("th", [
+          _vm._v(
+            "ID:" +
+              _vm._s(fixture.event.home) +
+              " Vs. " +
+              _vm._s(fixture.event.away)
+          ),
+          _c("br"),
+          _vm._v(
+            " " +
+              _vm._s(fixture.event.start_time) +
+              " " +
+              _vm._s(fixture.league.name)
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "300px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.home +
+                  "/" +
+                  fixture.sites.homeaway["1xbet"].odds["1"] +
+                  "/Home"
+              }
+            },
+            [
+              _vm._v(
+                _vm._s(fixture.event.home) +
+                  " " +
+                  _vm._s(fixture.sites.homeaway["1xbet"].odds["1"])
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "300px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sites.homeaway["1xbet"].odds["2"] +
+                  "/Away"
+              }
+            },
+            [
+              _vm._v(
+                _vm._s(fixture.event.away) +
+                  " " +
+                  _vm._s(fixture.sites.homeaway["1xbet"].odds["2"])
+              )
+            ]
+          )
+        ])
+      ])
+    }),
+    0
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49959,6 +50377,9 @@ Vue.component('main-component', __webpack_require__(/*! ./components/MainCompone
 Vue.component('volleyball-component', __webpack_require__(/*! ./components/VolleyBallComponent.vue */ "./resources/js/components/VolleyBallComponent.vue")["default"]);
 Vue.component('statistics-component', __webpack_require__(/*! ./components/StatisticsComponent.vue */ "./resources/js/components/StatisticsComponent.vue")["default"]);
 Vue.component('live-component', __webpack_require__(/*! ./components/LiveComponent.vue */ "./resources/js/components/LiveComponent.vue")["default"]);
+Vue.component('rugby-component', __webpack_require__(/*! ./components/RugbyComponent.vue */ "./resources/js/components/RugbyComponent.vue")["default"]);
+Vue.component('tennis-component', __webpack_require__(/*! ./components/TennisComponent.vue */ "./resources/js/components/TennisComponent.vue")["default"]);
+Vue.component('cricket-component', __webpack_require__(/*! ./components/CricketComponent.vue */ "./resources/js/components/CricketComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50013,6 +50434,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/CricketComponent.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/CricketComponent.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CricketComponent_vue_vue_type_template_id_3523b712___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CricketComponent.vue?vue&type=template&id=3523b712& */ "./resources/js/components/CricketComponent.vue?vue&type=template&id=3523b712&");
+/* harmony import */ var _CricketComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CricketComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/CricketComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _CricketComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CricketComponent_vue_vue_type_template_id_3523b712___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CricketComponent_vue_vue_type_template_id_3523b712___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CricketComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/CricketComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/CricketComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CricketComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CricketComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CricketComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CricketComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CricketComponent.vue?vue&type=template&id=3523b712&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/CricketComponent.vue?vue&type=template&id=3523b712& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CricketComponent_vue_vue_type_template_id_3523b712___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CricketComponent.vue?vue&type=template&id=3523b712& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CricketComponent.vue?vue&type=template&id=3523b712&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CricketComponent_vue_vue_type_template_id_3523b712___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CricketComponent_vue_vue_type_template_id_3523b712___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -50223,6 +50713,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/RugbyComponent.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/RugbyComponent.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _RugbyComponent_vue_vue_type_template_id_0c12578d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RugbyComponent.vue?vue&type=template&id=0c12578d& */ "./resources/js/components/RugbyComponent.vue?vue&type=template&id=0c12578d&");
+/* harmony import */ var _RugbyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RugbyComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/RugbyComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _RugbyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _RugbyComponent_vue_vue_type_template_id_0c12578d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _RugbyComponent_vue_vue_type_template_id_0c12578d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/RugbyComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/RugbyComponent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/RugbyComponent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RugbyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./RugbyComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RugbyComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RugbyComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/RugbyComponent.vue?vue&type=template&id=0c12578d&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/RugbyComponent.vue?vue&type=template&id=0c12578d& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RugbyComponent_vue_vue_type_template_id_0c12578d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./RugbyComponent.vue?vue&type=template&id=0c12578d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RugbyComponent.vue?vue&type=template&id=0c12578d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RugbyComponent_vue_vue_type_template_id_0c12578d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RugbyComponent_vue_vue_type_template_id_0c12578d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/StatisticsComponent.vue":
 /*!*********************************************************!*\
   !*** ./resources/js/components/StatisticsComponent.vue ***!
@@ -50271,6 +50830,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StatisticsComponent_vue_vue_type_template_id_3ec93802___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StatisticsComponent_vue_vue_type_template_id_3ec93802___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/TennisComponent.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/TennisComponent.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TennisComponent_vue_vue_type_template_id_2a521472___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TennisComponent.vue?vue&type=template&id=2a521472& */ "./resources/js/components/TennisComponent.vue?vue&type=template&id=2a521472&");
+/* harmony import */ var _TennisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TennisComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/TennisComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TennisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TennisComponent_vue_vue_type_template_id_2a521472___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TennisComponent_vue_vue_type_template_id_2a521472___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/TennisComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/TennisComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/TennisComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TennisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./TennisComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TennisComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TennisComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/TennisComponent.vue?vue&type=template&id=2a521472&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/TennisComponent.vue?vue&type=template&id=2a521472& ***!
+  \************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TennisComponent_vue_vue_type_template_id_2a521472___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./TennisComponent.vue?vue&type=template&id=2a521472& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/TennisComponent.vue?vue&type=template&id=2a521472&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TennisComponent_vue_vue_type_template_id_2a521472___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TennisComponent_vue_vue_type_template_id_2a521472___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

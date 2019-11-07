@@ -30,4 +30,6 @@ Route::get('/Fetch/{gameId}/{sport}/{Home}/{Odd}/{Nature}','fetchController@inde
 Route::get('/Statistics','StatisticsController@index');
 Route::get('/Highlights','HighlightController@index');
 Route::get('/Volleyball','VolleyballController@index');
-
+Route::get('/Rugby','RugbyController@index');
+Route::get('/Tennis','TennisController@index');
+Route::get('/Cricket','CricketController@index');
