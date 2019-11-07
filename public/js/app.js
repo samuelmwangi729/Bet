@@ -1838,6 +1838,8 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 //
 //
 //
@@ -1854,7 +1856,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       fixtures: [],
-      home: []
+      home: [],
+      defaults: 1.9
     };
   },
   mounted: function mounted() {
@@ -1863,10 +1866,12 @@ __webpack_require__.r(__webpack_exports__);
     var self = this;
     axios.get('https://app.oddsapi.io/api/v1/odds?sport=cricket&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
       _this.fixtures = response.data;
+      console.log(response.data);
       var i;
 
       for (i = 0; i < response.data.length; i++) {
-        console.log(response.data[i].sites);
+        // this.home=response.data[i].sites.homeaway['interwetten'].odds['1']
+        var ss = _typeof(response.data[i].sites.homeaway['interwetten'].odds['1']);
       }
     })["catch"](function (error) {
       console.log("Error", error);
@@ -37454,7 +37459,11 @@ var render = function() {
     },
     _vm._l(_vm.fixtures, function(fixture) {
       return _c("tr", { key: fixture.id }, [
-        _vm._v("\n         " + _vm._s(fixture.sites.homeaway) + "\n         ")
+        _vm._v(
+          "\n         " +
+            _vm._s(fixture.sites.homeaway.interetten) +
+            "\n         "
+        )
       ])
     }),
     0
