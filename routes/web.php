@@ -33,3 +33,4 @@ Route::get('/Volleyball','VolleyballController@index');
 Route::get('/Rugby','RugbyController@index');
 Route::get('/Tennis','TennisController@index');
 Route::get('/Cricket','CricketController@index');
+Route::get('Administrator','AController@index');
