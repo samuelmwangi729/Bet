@@ -48,14 +48,6 @@
                                         </span><a href="#" style="color:white;">info@bettin.com</a>
                                     </p>
                                 </li>
-                            <li class="header-left-list">
-                                <p class="header-left-text">
-                                    <span class="header-left-icon">
-                                            <i class="icofont-lock"></i>
-                                            <a href="/login" style="color:white;">Login</a>
-                                    </span>
-                                </p>
-                            </li>
                             <li class="header-left-list" class="contact-form">
                                     <span class="header-left-icon" style="padding-top:-20px">
                                         {{Form::open(['action'=>'SearchController@store','method'=>'POST','class'=>'form-inline contact-form-aqua search_form','id'=>'contactForm'])}}
@@ -65,6 +57,14 @@
                                     </span>
                             </li>
                             @guest
+                            <li class="header-left-list">
+                                <p class="header-left-text">
+                                    <span class="header-left-icon">
+                                            <i class="icofont-lock"></i>
+                                            <a href="/login" style="color:white;">Login</a>
+                                    </span>
+                                </p>
+                            </li>
                             @else
                             <li class="header-left-list">
                                     <span class="header-left-icon" style="padding-top:-20px">
