@@ -33,6 +33,6 @@ Route::get('/Volleyball','VolleyballController@index');
 Route::get('/Rugby','RugbyController@index');
 Route::get('/Tennis','TennisController@index');
 Route::get('/Cricket','CricketController@index');
-Route::get('/Administrator','AController@index');
+Route::get('/1eda23758be9e36e5e0d2a6a87de584aaca0193f','AController@index');
 Route::get('/Betslip','BetController@index');
 Route::get('/77cfd8c4ee27a93e2575f9e4ab134273491ac162','BetController@showBets');
