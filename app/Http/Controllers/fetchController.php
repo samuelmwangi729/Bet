@@ -15,6 +15,7 @@ class fetchController extends Controller
     }
 
     public function index($gameId,$Sport,$Home,$Odd,$Nature){
+        $user=auth()->user()->email;
         $bets=[$gameId,$Sport,$Home,$Odd,$Nature];
         $bet=new fetch();
         $bet->gameId=$bets[0];
@@ -22,7 +23,7 @@ class fetchController extends Controller
         $bet->Team=$bets[2];
         $bet->Odd=$bets[3];
         $bet->Outcome=$bets[4];
-        $bet->userEmail=$bets[0];
+        $bet->userEmail=$user;
         $bet->save();
         return  back()->with('success','Bet Added to Betslip');
     }

@@ -1838,9 +1838,6 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-//
 //
 //
 //
@@ -1855,9 +1852,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      fixtures: [],
-      home: [],
-      defaults: 1.9
+      fixtures: []
     };
   },
   mounted: function mounted() {
@@ -1866,13 +1861,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     var self = this;
     axios.get('https://app.oddsapi.io/api/v1/odds?sport=cricket&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
       _this.fixtures = response.data;
-      console.log(response.data);
-      var i;
-
-      for (i = 0; i < response.data.length; i++) {
-        // this.home=response.data[i].sites.homeaway['interwetten'].odds['1']
-        var ss = _typeof(response.data[i].sites.homeaway['interwetten'].odds['1']);
-      }
     })["catch"](function (error) {
       console.log("Error", error);
     });
@@ -2038,18 +2026,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      fixtures: [],
-      home: []
+      fixtures: []
     };
   },
   mounted: function mounted() {
     var _this = this;
 
     var self = this;
-    axios.get('https://app.oddsapi.io/api/v1/odds?sport=rugby-union&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
+    axios.get('https://app.oddsapi.io/api/v1/odds?sport=rugby-league&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
       _this.fixtures = response.data;
       console.log(response.data);
     })["catch"](function (error) {
@@ -2079,11 +2067,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       fixtures: [],
-      home: []
+      size: ''
     };
   },
   mounted: function mounted() {
@@ -2092,7 +2084,7 @@ __webpack_require__.r(__webpack_exports__);
     var self = this;
     axios.get('https://app.oddsapi.io/api/v1/odds?sport=tennis&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
       _this.fixtures = response.data;
-      console.log(response.data);
+      _this.size = response.data.length;
     })["catch"](function (error) {
       console.log("Error", error);
     });
@@ -37459,11 +37451,102 @@ var render = function() {
     },
     _vm._l(_vm.fixtures, function(fixture) {
       return _c("tr", { key: fixture.id }, [
-        _vm._v(
-          "\n         " +
-            _vm._s(fixture.sites.homeaway.interetten) +
-            "\n         "
-        )
+        _c("th", [
+          _vm._v(
+            "ID:" +
+              _vm._s(fixture.event.home) +
+              " Vs. " +
+              _vm._s(fixture.event.away)
+          ),
+          _c("br"),
+          _vm._v(
+            " " +
+              _vm._s(fixture.event.start_time) +
+              " " +
+              _vm._s(fixture.league.name)
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "200px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.home +
+                  "/" +
+                  fixture.sites["1x2"]["1xbet"].odds["1"] +
+                  "/Home"
+              }
+            },
+            [_vm._v(_vm._s(fixture.event.home) + " " + _vm._s(_vm.home))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "200px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sites["1x2"]["1xbet"].odds["X"] +
+                  "/Draw"
+              }
+            },
+            [_vm._v(" Draw " + _vm._s(fixture.sites.homeaway))]
+          )
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-success",
+              staticStyle: { width: "200px", "font-size": "10px" },
+              attrs: {
+                href:
+                  "Fetch/" +
+                  fixture.event.home +
+                  "-" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sport.name +
+                  "/" +
+                  fixture.event.away +
+                  "/" +
+                  fixture.sites["1x2"]["1xbet"].odds["2"] +
+                  "/Away"
+              }
+            },
+            [
+              _vm._v(
+                _vm._s(fixture.event.away) +
+                  " " +
+                  _vm._s(fixture.sites.homeaway)
+              )
+            ]
+          )
+        ])
       ])
     }),
     0
@@ -37905,20 +37988,20 @@ var render = function() {
       staticStyle: { "font-size": "10px" },
       attrs: { cellspacing: "5" }
     },
-    _vm._l(_vm.fixtures, function(fixture) {
+    _vm._l(_vm.fixtures, function(fixture, id) {
       return _c("tr", { key: fixture.id }, [
         _c("th", [
           _vm._v(
             "ID:" +
               _vm._s(fixture.event.home) +
               " Vs. " +
-              _vm._s(fixture.event.away) +
-              " "
+              _vm._s(fixture.event.away)
           ),
           _c("br"),
           _vm._v(
-            _vm._s(fixture.event.start_time) +
-              "  " +
+            " " +
+              _vm._s(fixture.event.start_time) +
+              " " +
               _vm._s(fixture.league.name)
           )
         ]),
@@ -37928,7 +38011,7 @@ var render = function() {
             "a",
             {
               staticClass: "btn btn-success",
-              staticStyle: { width: "300px", "font-size": "10px" },
+              staticStyle: { width: "200px", "font-size": "10px" },
               attrs: {
                 href:
                   "Fetch/" +
@@ -37940,7 +38023,7 @@ var render = function() {
                   "/" +
                   fixture.event.home +
                   "/" +
-                  fixture.sites["1x2"]["1xbet"].odds["1"] +
+                  fixture["sites"]["1x2"]["888sport"]["odds"]["1"] +
                   "/Home"
               }
             },
@@ -37948,7 +38031,7 @@ var render = function() {
               _vm._v(
                 _vm._s(fixture.event.home) +
                   " " +
-                  _vm._s(fixture.sites["1x2"]["1xbet"].odds["1"])
+                  _vm._s(fixture["sites"]["1x2"]["888sport"]["odds"]["1"])
               )
             ]
           )
@@ -37959,7 +38042,7 @@ var render = function() {
             "a",
             {
               staticClass: "btn btn-success",
-              staticStyle: { width: "300px", "font-size": "10px" },
+              staticStyle: { width: "200px", "font-size": "10px" },
               attrs: {
                 href:
                   "Fetch/" +
@@ -37971,11 +38054,16 @@ var render = function() {
                   "/" +
                   fixture.event.away +
                   "/" +
-                  fixture.sites["1x2"]["1xbet"].odds["X"] +
+                  fixture["sites"]["1x2"]["888sport"]["odds"]["X"] +
                   "/Draw"
               }
             },
-            [_vm._v(" Draw " + _vm._s(fixture.sites["1x2"]["1xbet"].odds["X"]))]
+            [
+              _vm._v(
+                " Draw " +
+                  _vm._s(fixture["sites"]["1x2"]["888sport"]["odds"]["X"])
+              )
+            ]
           )
         ]),
         _vm._v(" "),
@@ -37984,7 +38072,7 @@ var render = function() {
             "a",
             {
               staticClass: "btn btn-success",
-              staticStyle: { width: "300px", "font-size": "10px" },
+              staticStyle: { width: "200px", "font-size": "10px" },
               attrs: {
                 href:
                   "Fetch/" +
@@ -37996,7 +38084,7 @@ var render = function() {
                   "/" +
                   fixture.event.away +
                   "/" +
-                  fixture.sites["1x2"]["1xbet"].odds["2"] +
+                  fixture["sites"]["1x2"]["888sport"]["odds"]["2"] +
                   "/Away"
               }
             },
@@ -38004,7 +38092,7 @@ var render = function() {
               _vm._v(
                 _vm._s(fixture.event.away) +
                   " " +
-                  _vm._s(fixture.sites["1x2"]["1xbet"].odds["2"])
+                  _vm._s(fixture["sites"]["1x2"]["888sport"]["odds"]["2"])
               )
             ]
           )
@@ -38090,83 +38178,88 @@ var render = function() {
     },
     _vm._l(_vm.fixtures, function(fixture) {
       return _c("tr", { key: fixture.id }, [
-        _c("th", [
-          _vm._v(
-            "ID:" +
-              _vm._s(fixture.event.home) +
-              " Vs. " +
-              _vm._s(fixture.event.away)
-          ),
-          _c("br"),
-          _vm._v(
-            " " +
-              _vm._s(fixture.event.start_time) +
-              " " +
-              _vm._s(fixture.league.name)
-          )
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-success",
-              staticStyle: { width: "300px", "font-size": "10px" },
-              attrs: {
-                href:
-                  "Fetch/" +
-                  fixture.event.home +
-                  "-" +
-                  fixture.event.away +
-                  "/" +
-                  fixture.sport.name +
-                  "/" +
-                  fixture.event.home +
-                  "/" +
-                  fixture.sites.homeaway["1xbet"].odds["1"] +
-                  "/Home"
-              }
-            },
-            [
-              _vm._v(
-                _vm._s(fixture.event.home) +
+        _vm._v("\n     " + _vm._s(_vm.fixtures.length) + "\n     "),
+        _vm.size === 0
+          ? _c("h1", [_vm._v("No Game")])
+          : _c("span", [
+              _c("th", [
+                _vm._v(
+                  "ID:" +
+                    _vm._s(fixture.event.home) +
+                    " Vs. " +
+                    _vm._s(fixture.event.away)
+                ),
+                _c("br"),
+                _vm._v(
                   " " +
-                  _vm._s(fixture.sites.homeaway["1xbet"].odds["1"])
-              )
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-success",
-              staticStyle: { width: "300px", "font-size": "10px" },
-              attrs: {
-                href:
-                  "Fetch/" +
-                  fixture.event.home +
-                  "-" +
-                  fixture.event.away +
-                  "/" +
-                  fixture.sport.name +
-                  "/" +
-                  fixture.event.away +
-                  "/" +
-                  fixture.sites.homeaway["1xbet"].odds["2"] +
-                  "/Away"
-              }
-            },
-            [
-              _vm._v(
-                _vm._s(fixture.event.away) +
-                  " " +
-                  _vm._s(fixture.sites.homeaway["1xbet"].odds["2"])
-              )
-            ]
-          )
-        ])
+                    _vm._s(fixture.event.start_time) +
+                    " " +
+                    _vm._s(fixture.league.name)
+                )
+              ]),
+              _vm._v(" "),
+              _c("th", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-success",
+                    staticStyle: { width: "300px", "font-size": "10px" },
+                    attrs: {
+                      href:
+                        "Fetch/" +
+                        fixture.event.home +
+                        "-" +
+                        fixture.event.away +
+                        "/" +
+                        fixture.sport.name +
+                        "/" +
+                        fixture.event.home +
+                        "/" +
+                        fixture.sites.homeaway["1xbet"].odds["1"] +
+                        "/Home"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      _vm._s(fixture.event.home) +
+                        " " +
+                        _vm._s(fixture.sites.homeaway["1xbet"].odds["1"])
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("th", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-success",
+                    staticStyle: { width: "300px", "font-size": "10px" },
+                    attrs: {
+                      href:
+                        "Fetch/" +
+                        fixture.event.home +
+                        "-" +
+                        fixture.event.away +
+                        "/" +
+                        fixture.sport.name +
+                        "/" +
+                        fixture.event.away +
+                        "/" +
+                        fixture.sites.homeaway["1xbet"].odds["2"] +
+                        "/Away"
+                    }
+                  },
+                  [
+                    _vm._v(
+                      _vm._s(fixture.event.away) +
+                        " " +
+                        _vm._s(fixture.sites.homeaway["1xbet"].odds["2"])
+                    )
+                  ]
+                )
+              ])
+            ])
       ])
     }),
     0
@@ -51000,8 +51093,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/p1rate/Desktop/blog/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/p1rate/Desktop/blog/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/p1rate/Bet/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/p1rate/Bet/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -11,6 +11,14 @@ class AccountController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        return view('/Users/Account');
+        $view='/Users/Account';
+        // if(auth()->user()->level=='User'){
+        //     $redirectTo = '/Administrator';
+            
+        // }else{
+        //     $view='/Administrator';
+        // }
+        ///Users/Account'
+        return view($view);
     }
 }

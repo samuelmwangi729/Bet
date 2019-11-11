@@ -127,17 +127,11 @@
                             <a class="nav-link" href="#investment-section" title="How to Bet">BETTING</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" title="Cash Out Policy">PAYMENTS</a>
-                        </li>
-                        <li class="nav-item">
                                 <a class="nav-link" href="/Statistics" title="Head To Head Stats on Live Games">STATISTICS</a>
                             </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Results" title="Completed Match Results">RESULTS</a>
                         </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="#contact-us-section" title="Our Money Back Policy">RETURNS</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/About" title="About Us">ABOUT</a>
                             </li>
