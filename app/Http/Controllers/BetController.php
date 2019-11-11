@@ -19,7 +19,7 @@ class BetController extends Controller
     }
     public function showBets(){
         $email=auth()->user()->email;
-        $bets=DB::table('fetches')->pluck('userEmail',$email);
+        $bets=DB::select('select * from fetches where userEmail = ?', [$email]);
         return json_encode($bets);
     }
 }

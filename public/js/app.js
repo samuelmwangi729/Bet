@@ -2109,11 +2109,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       fixtures: [],
-      home: []
+      Odds: ''
     };
   },
   mounted: function mounted() {
@@ -2123,6 +2160,14 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('http://127.0.0.1:8000/77cfd8c4ee27a93e2575f9e4ab134273491ac162').then(function (response) {
       _this.fixtures = response.data;
       console.log(response.data);
+      var i;
+      var Odd = 1;
+
+      for (i = 0; i < response.data.length; i++) {
+        Odd = Odd * response.data[i].Odd.toFixed(2);
+      }
+
+      _this.Odds = Odd.toFixed(4);
     })["catch"](function (error) {
       console.log("Error", error);
     });
@@ -38325,20 +38370,99 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "table",
-    {
-      staticClass: "table",
-      staticStyle: { "font-size": "10px" },
-      attrs: { cellspacing: "5" }
-    },
-    _vm._l(_vm.fixtures, function(fixture) {
-      return _c("tr", { key: fixture.id })
-    }),
-    0
-  )
+  return _c("div", { staticClass: "col-md offset-md-2" }, [
+    _c(
+      "table",
+      {
+        staticClass: "table table-hover table-striped text-left",
+        staticStyle: { "margin-top": "70px", "font-size": "10px" }
+      },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._l(_vm.fixtures, function(fixture, odd) {
+          return _c("tr", { key: fixture.id }, [
+            _c("td", [
+              _vm._v("\n            " + _vm._s(fixture.gameId) + "\n        ")
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v("\n            " + _vm._s(fixture.Sport) + "\n        ")
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v("\n            " + _vm._s(fixture.Team) + "\n        ")
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                "\n            " + _vm._s(fixture.Odd.toFixed(2)) + "\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                "\n            " + _vm._s(fixture.Outcome) + " Win\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                "\n            " + _vm._s(fixture.created_at) + " \n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("a", { attrs: { href: "/del/" + fixture.id } }, [_vm._v("×")])
+            ])
+          ])
+        }),
+        _vm._v(" "),
+        _c("tr", [
+          _c(
+            "td",
+            {
+              staticClass: "text-right",
+              staticStyle: { color: "red", "font-weight": "bold" },
+              attrs: { colspan: "7" }
+            },
+            [
+              _vm._v("\n     Total Odds: " + _vm._s(_vm.Odds) + "  "),
+              _c(
+                "a",
+                { staticClass: "badge badge-primary", attrs: { href: "#" } },
+                [_vm._v("Place Bet")]
+              )
+            ]
+          )
+        ])
+      ],
+      2
+    )
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", [_vm._v("Game ID")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Sport")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Pick")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Odd")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Outcome")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Placed At")]),
+      _vm._v(" "),
+      _c("th", [_vm._v(" ")])
+    ])
+  }
+]
 render._withStripped = true
 
 
