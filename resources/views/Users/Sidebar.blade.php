@@ -110,7 +110,7 @@
                     <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                       <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
                       <div class="d-flex flex-column justify-content-around">
-                      <small class="mb-1 text-muted">Running Bets<sup><span class="badge badge-success" style="border-radius:20px">757</span></sup></small>
+                      <small class="mb-1 text-muted">Betslip<sup><span class="badge badge-success" style="border-radius:20px">{{$count}}</span></sup></small>
                       </div>
                     </div>
                   </div>

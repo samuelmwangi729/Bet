@@ -14,8 +14,13 @@ class AccountController extends Controller
     }
     public function index(){
         $email=auth()->user()->email;
-        $betsCount=DB::select('select count(id) from fetches where userEmail = ?', [$email]);
+        // $betsCount=DB::select('select count(id) from fetches where userEmail = ?', [$email]);
+        $userBets = DB::table('fetches')->where('userEmail', '=', $email)->get();
+        $count=0;
+        foreach ($userBets as $bet) {
+            $count=$count+1;
+        }
         $view='/Users/Account';
-        return view($view)->with('BetsCount',$betsCount);
+        return view($view)->with('count',$count);
     }
 }
