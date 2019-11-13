@@ -5,10 +5,9 @@
 <div class="row">
 <section style="padding-top:80px">
 <div id="app">
-    <tennis-component></tennis-component>
+    <tennis1-component></tennis1-component>
 </div>
 </section>
 </div>
-
-   @endsection
+@endsection
     </body>

@@ -1,5 +1,5 @@
 <template>
-   <table class="table" cellspacing="5" style="font-size:10px">
+   <table class="table" cellspacing="5" style="font-size:10px;margin:auto;width:50% !important">
         <tr v-for="fixture in fixtures" :key="fixture.id">
             <th>ID:{{  fixture.event.home }} Vs. {{  fixture.event.away }}<br> {{  fixture.event.start_time }} {{  fixture.league.name }}</th>
             <th><a class="btn btn-success" style="width:200px;font-size:10px" v-bind:href="'Fetch/'+fixture.event.home+'-'+fixture.event.away+'/'+ fixture.sport.name+ '/'+fixture.event.home+'/'+fixture.sites['1x2']['1xbet'].odds['1']+'/Home'">{{  fixture.event.home }} {{  fixture.sites['1x2']['1xbet'].odds['1'] }}</a></th>
