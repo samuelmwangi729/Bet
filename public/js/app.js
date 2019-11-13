@@ -1858,6 +1858,7 @@ __webpack_require__.r(__webpack_exports__);
     var self = this;
     axios.get('https://app.oddsapi.io/api/v1/odds?sport=cricket&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d').then(function (response) {
       _this.fixtures = response.data;
+      console.log(response.data);
     })["catch"](function (error) {
       console.log("Error", error);
     });
@@ -37525,8 +37526,10 @@ var render = function() {
       attrs: { cellspacing: "5" }
     },
     _vm._l(_vm.fixtures, function(fixture) {
-      return _c("tr", { key: fixture.id }, [
-        _vm._v("\n         " + _vm._s(fixture["sites"].homeaway) + "\n     ")
+      return _c("tr", { key: fixture.sites }, [
+        _vm._v(
+          "\n         " + _vm._s(fixture["sites"].homeaway.bet365) + "\n     "
+        )
       ])
     }),
     0
