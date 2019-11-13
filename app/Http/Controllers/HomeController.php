@@ -11,11 +11,14 @@ class HomeController extends Controller
      *
      * @return void
      */
+    public function __construct()
+    {
+    }
 
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {

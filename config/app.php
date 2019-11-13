@@ -227,7 +227,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form'=> Collective\Html\FormFacade::class,
-        'Form'=> Collective\Html\HtmlFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Flash'=> Laracasts\Flash\Flash::class,
 
     ],
 
