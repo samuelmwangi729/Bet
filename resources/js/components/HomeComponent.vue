@@ -30,7 +30,7 @@
         mounted() {
             var self=this;
 
-            axios.get('https://app.oddsapi.io/api/v1/odds?sport=soccer&country=europe&league=soccer-europe-europa-league&apikey=f4b7f540-fa2c-11e9-a8e3-51b3476555d8')
+            axios.get('https://app.oddsapi.io/api/v1/odds?sport=soccer&country=europe&league=soccer-europe-europa-league&apikey=b7bac190-06f2-11ea-acf9-650231394a73')
             .then(response =>{
                 this.fixtures=response.data;
             }).catch(error =>{

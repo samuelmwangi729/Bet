@@ -70,7 +70,7 @@
             </div>
         </form>
     </div>
-    <a href="/login">Sign In</a>
+    <a href="/login">Sign In</a> &nbsp;<a href="/">Home</a>
     <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->

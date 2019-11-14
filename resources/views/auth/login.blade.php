@@ -82,7 +82,7 @@
         </form>
 
         <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
-        <a href="{{ url('/register') }}" class="text-center">Sign Up</a>
+        <a href="{{ url('/register') }}" class="text-center">Sign Up</a> &nbsp;&nbsp;<a href="/" class="ml-auto"><i class="fa fa-home"></i>Home</a>
 
     </div>
     <!-- /.login-box-body -->

@@ -239,9 +239,6 @@
         </div>
     </div>
 </section>
-<div class="app" id="app">
-    <home-component></home-component>
-</div>
 <!-- calculator top end -->
 <!-- advantage section begin -->
 <section class="advantage-section" style="background-attachment:fixed;margin-top:30px">

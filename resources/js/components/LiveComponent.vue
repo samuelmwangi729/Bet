@@ -26,7 +26,7 @@
         mounted() {
             var self=this;
 
-            axios.get('http://livescore-api.com/api-client/scores/events.json?key=4qRkI93i2JsluCG0&secret=jYCIFbT1K53LyulDUcXDl1VoKoKf0rgj&id=129180')
+            axios.get('http://livescore-api.com/api-client/scores/events.json?key=b7bac190-06f2-11ea-acf9-650231394a73')
             .then(response =>{
                 this.fixtures=response.data;
                 console.log(response.data)

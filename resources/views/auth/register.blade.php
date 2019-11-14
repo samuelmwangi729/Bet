@@ -104,7 +104,7 @@
             </div>
         </form>
 
-        <a href="{{ url('/login') }}" class="text-center">Already A Member? Sign In</a>
+        <a href="{{ url('/login') }}" class="text-center">Already A Member? Sign In</a> &nbsp;&nbsp;<a href="/"><i class="fa fa-home"></i>Home</a>
     </div>
     <!-- /.form-box -->
 </div>

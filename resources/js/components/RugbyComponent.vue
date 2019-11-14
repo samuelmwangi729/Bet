@@ -21,7 +21,7 @@
         mounted() {
             var self=this;
 
-            axios.get('https://app.oddsapi.io/api/v1/odds?sport=rugby-league&apikey=4d7815c0-fca3-11e9-9eb0-099a0ceed22d')
+            axios.get('https://app.oddsapi.io/api/v1/odds?sport=rugby-league&apikey=b7bac190-06f2-11ea-acf9-650231394a73')
             .then(response =>{
                 this.fixtures=response.data;
                 console.log(response.data)
