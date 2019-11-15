@@ -41,3 +41,7 @@ Route::get('/77cfd8c4ee27a93e2575f9e4ab134273491ac162','BetController@showBets')
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

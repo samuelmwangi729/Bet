@@ -1,8 +1,5 @@
 @extends('layouts.app')
 <!--Start Preloader-->
-<div class="preloader" id="preloader"></div>
-<!--End Preloader-->
-
 <!-- header top begin -->
 <header class="header-section" id="header-section">
     <div class="header-top">
@@ -101,144 +98,60 @@
     <!-- nav top end -->
 </header>
 <!-- header top end -->
-
-<!-- banner top begin -->
-<section class="banner-section">
-    <div class="overlay">
-        <div class="video-overlay"></div>
-        <video playsinline="playsinline" autoplay="autoplay" muted="no" loop="loop">
-            <source src="img/football.mp4" type="video/mp4">
-        </video>
-
-        <div class="container">
-            <div class="total-slide">
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <div class="banner-text">
-                            <h1 class="font-light">Take Your</h1>
-                            <h1 class="font-bold">Sports Betting</h1>
-                            <h2 class="font-light">Strategy to the next level</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h3 class="banner-bottom-text" style="text-decoration:underline">A Profitable platform for high-margin SPORT betting</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="get-start">
-                            <a href="/getstarted">GET STARTED NOW!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+      <img class="d-block w-100" src="{{asset('images/index.jpg')}}" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="color:red;margin-top:-100px">Soccer</h1>
+      <p>Share the Thrill Of Betting with {{config('app.name')}}</p>
+      </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{asset('images/football.jpg')}}" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 style="color:red;margin-top:-50px">American Football</h1>
+          <p>Share the Thrill Of Betting with {{config('app.name')}}</p>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{asset('images/volleyball.jpg')}}" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 style="color:red;margin-top:-50px">VolleyBall</h1>
+          <p>Share the Thrill Of Betting with {{config('app.name')}}</p>
         </div>
-    </div>
-</section>
-<!-- banner top end -->
-
-<!-- calculator top begin -->
-<section class="choose-section" style="background-attachment:fixed;height:140px;padding-bottom:10px;margin-top:-150px">
-    <div class="container-fruit text-center">
-        <div class="choose-section-carousel">
-            <div class="col">
-                <div class="single-item">
-                    <div class="icon-box">
-                            <img src="img/soccer.png" height="80px" width="100px" alt="#" title="horse Racing">
-                            <span style="color:white">Soccer Leagues</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="single-item">
-                        <img src="img/football.png" height="80px" width="100px" alt="#">
-                       <span style="color:white"> American Football</span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="single-item">
-                    <div class="icon-box">
-                            <img src="img/hockey.png" height="80px" width="100px" alt="#">
-                            <span style="color:white">Hockey</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                    <div class="single-item">
-                        <div class="icon-box">
-                                <img src="img/basketball.png" height="80px" width="100px" alt="#" title="horse Racing">
-                                <span style="color:white">Basket Ball</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                        <div class="single-item">
-                            <div class="icon-box">
-                                    <img src="img/tennis.png" height="80px" width="100px" alt="#" title="horse Racing">
-                                    <span style="color:white">Tennis</span>
-                            </div>
-                        </div>
-                    </div>
-            <div class="col">
-                <div class="single-item">
-                    <div class="icon-box">
-                            <img src="img/volleyball.png" height="80px" width="100px" alt="#">
-                            <span style="color:white">VolleyBall</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="single-item">
-                    <div class="icon-box">
-                            <img src="img/rugby.png" height="80px" width="100px" alt="#">
-                            <span style="color:white">Rugby</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="single-item">
-                    <div class="icon-box">
-                            <img src="img/baseball.png" height="80px" width="100px" alt="#" title="horse Racing">
-                            <span style="color:white">Baseball</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="single-item">
-                    <div class="icon-box">
-                            <img src="img/cricket.png" height="80px" width="100px" alt="#" title="horse Racing">
-                            <span style="color:white">Cricket</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                    <div class="single-item">
-                        <div class="icon-box">
-                                <img src="img/soccer.png" height="80px" width="100px" alt="#" title="horse Racing">
-                                <span style="color:white">Soccer Leagues</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="single-item">
-                            <img src="img/football.png" height="80px" width="100px" alt="#">
-                           <span style="color:white"> American Football</span>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="single-item">
-                        <div class="icon-box">
-                                <img src="img/hockey.png" height="80px" width="100px" alt="#">
-                                <span style="color:white">Hockey</span>
-                        </div>
-                    </div>
-                </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{asset('images/tennis.jpg')}}" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 style="color:red;margin-top:-50px">Tennis</h1>
+          <p>Share the Thrill Of Betting with {{config('app.name')}}</p>
         </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{{asset('images/run.jpg')}}" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h1 style="color:red;margin-top:-50px">Athletics</h1>
+          <p>Share the Thrill Of Betting with {{config('app.name')}}</p>
+        </div>
+      </div>
     </div>
-</section>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
 <!-- calculator top end -->
 <!-- advantage section begin -->
 <section class="advantage-section" style="background-attachment:fixed;margin-top:30px">
