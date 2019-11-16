@@ -21,7 +21,7 @@
     length:20px !important;
 }
 </style>
-<header class="header-section" id="header-section" style="background-color:#1b1829">
+<header class="header-section" id="header-section" style="background-image: linear-gradient(to right, green,blue)">
         <div class="header-top">
             <div class="container">
                 <div class="row">
@@ -95,7 +95,7 @@
             </div>
         </div>
         <!-- nav top begin -->
-        <nav id="navbar" class="navbar navbar-expand-lg  reunir-navbar" style="background-color:#1b1829">
+        <nav id="navbar" class="navbar navbar-expand-lg  reunir-navbar" style=" background-image: linear-gradient(to right, red,green,violet)">
             <div class="container">
 
                 <div class="logo-section">

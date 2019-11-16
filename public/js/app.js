@@ -38031,7 +38031,7 @@ var render = function() {
         staticClass: "table table-bordered table-striped text-center",
         staticStyle: {
           "font-family": "courier",
-          "background-color": "black",
+          "background-color": "#1b1829",
           color: "white"
         }
       },
