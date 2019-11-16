@@ -38024,12 +38024,13 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container table-responsive" }, [
+  return _c("div", [
     _c(
       "table",
       {
-        staticClass: "table table-bordered table-striped text-center",
+        staticClass: "table table-bordered",
         staticStyle: {
+          "font-size": "10px",
           "font-family": "courier",
           "background-color": "#1b1829",
           color: "white"
@@ -38046,7 +38047,7 @@ var render = function() {
               _vm._v(
                 _vm._s(
                   fixture.sport_event.competitors["0"].name +
-                    "  --Vs--  " +
+                    ". Vs ." +
                     fixture.sport_event.competitors["1"].name
                 )
               )
@@ -38058,18 +38059,14 @@ var render = function() {
                 ? _c("span", { staticStyle: { color: "red" } }, [
                     _vm._v(
                       "\n              " +
-                        _vm._s(
-                          "Winner:" + fixture.sport_event.competitors["0"].name
-                        ) +
+                        _vm._s(fixture.sport_event.competitors["0"].name) +
                         "\n          "
                     )
                   ])
                 : _c("span", { staticStyle: { color: "red" } }, [
                     _vm._v(
                       "\n              " +
-                        _vm._s(
-                          "Winner:" + fixture.sport_event.competitors["1"].name
-                        ) +
+                        _vm._s(fixture.sport_event.competitors["1"].name) +
                         "\n          "
                     )
                   ])
