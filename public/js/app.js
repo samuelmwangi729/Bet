@@ -2052,7 +2052,6 @@ __webpack_require__.r(__webpack_exports__);
     var self = this;
     axios.get('https://cors-anywhere.herokuapp.com/https://api.sportradar.com/tennis-t2/en/schedules/2016-07-06/results.json?api_key=j9qhevpfbjmyb4xc5qwkayx2').then(function (response) {
       _this.fixtures = response.data.results;
-      console.log(response.data.results);
     })["catch"](function (error) {
       console.log("Error", error);
     });
