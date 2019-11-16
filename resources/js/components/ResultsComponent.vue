@@ -1,19 +1,27 @@
 <template>
-   <table class="table" cellspacing="5" style="font-size:10px;margin:auto;width:50% !important">
-        <tr v-for="fixture in fixtures" :key="fixture.results">
-            <td>Game</td>
+   <div class="container table-responsive">
+         <table class="table table-bordered table-striped text-center" style="font-family:courier;background-color:black;color:white;">
+       <tr>
+           <td>GameId</td>
             <td>Competitors</td>
             <td>Winner</td>
-            {{fixture.sport_event.competitors['0'].name}}
-             <!-- {{"Winner"+fixture.sport_event_status.winner_id}} -->
-             <span v-if="fixture.sport_event.competitors[0].id === fixture.sport_event_status.winner_id">
+       </tr>
+        <tr v-for="fixture in fixtures" :key="fixture.results">
+            <td>{{fixture.sport_event.id.split(':')[2]}}</td>
+            <td>{{fixture.sport_event.competitors['0'].name + "  --Vs--  "+ fixture.sport_event.competitors['1'].name}}</td>
+            <td>
+                 <!-- {{"Winner"+fixture.sport_event_status.winner_id}} -->
+             <span style="color:red" v-if="fixture.sport_event.competitors[0].id === fixture.sport_event_status.winner_id">
                  {{"Winner:"+fixture.sport_event.competitors['0'].name}}
              </span>
              <span style="color:red" v-else>
                  {{"Winner:"+fixture.sport_event.competitors['1'].name}}
              </span>
+            </td>
+            
         </tr>
-     </table>
+    </table>
+   </div>
 </template>
 
 <script>

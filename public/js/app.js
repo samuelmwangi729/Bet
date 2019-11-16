@@ -2028,6 +2028,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -38014,51 +38025,77 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "table",
-    {
-      staticClass: "table",
-      staticStyle: {
-        "font-size": "10px",
-        margin: "auto",
-        width: "50% !important"
+  return _c("div", { staticClass: "container table-responsive" }, [
+    _c(
+      "table",
+      {
+        staticClass: "table table-bordered table-striped text-center",
+        staticStyle: {
+          "font-family": "courier",
+          "background-color": "black",
+          color: "white"
+        }
       },
-      attrs: { cellspacing: "5" }
-    },
-    _vm._l(_vm.fixtures, function(fixture) {
-      return _c("tr", { key: fixture.results }, [
-        _vm._v(
-          "\n         " +
-            _vm._s(fixture.sport_event.competitors["0"].name) +
-            "\n          "
-        ),
+      [
+        _vm._m(0),
         _vm._v(" "),
-        fixture.sport_event.competitors[0].id ===
-        fixture.sport_event_status.winner_id
-          ? _c("span", [
+        _vm._l(_vm.fixtures, function(fixture) {
+          return _c("tr", { key: fixture.results }, [
+            _c("td", [_vm._v(_vm._s(fixture.sport_event.id.split(":")[2]))]),
+            _vm._v(" "),
+            _c("td", [
               _vm._v(
-                "\n              " +
-                  _vm._s(
-                    "Winner:" + fixture.sport_event.competitors["0"].name
-                  ) +
-                  "\n          "
+                _vm._s(
+                  fixture.sport_event.competitors["0"].name +
+                    "  --Vs--  " +
+                    fixture.sport_event.competitors["1"].name
+                )
               )
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              fixture.sport_event.competitors[0].id ===
+              fixture.sport_event_status.winner_id
+                ? _c("span", { staticStyle: { color: "red" } }, [
+                    _vm._v(
+                      "\n              " +
+                        _vm._s(
+                          "Winner:" + fixture.sport_event.competitors["0"].name
+                        ) +
+                        "\n          "
+                    )
+                  ])
+                : _c("span", { staticStyle: { color: "red" } }, [
+                    _vm._v(
+                      "\n              " +
+                        _vm._s(
+                          "Winner:" + fixture.sport_event.competitors["1"].name
+                        ) +
+                        "\n          "
+                    )
+                  ])
             ])
-          : _c("span", { staticStyle: { color: "red" } }, [
-              _vm._v(
-                "\n              " +
-                  _vm._s(
-                    "Winner:" + fixture.sport_event.competitors["1"].name
-                  ) +
-                  "\n          "
-              )
-            ])
-      ])
-    }),
-    0
-  )
+          ])
+        })
+      ],
+      2
+    )
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [_vm._v("GameId")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Competitors")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Winner")])
+    ])
+  }
+]
 render._withStripped = true
 
 
