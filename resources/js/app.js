@@ -28,6 +28,7 @@ Vue.component('rugby-component',require('./components/RugbyComponent.vue').defau
 Vue.component('cricket-component',require('./components/CricketComponent.vue').default)
 Vue.component('view-component',require('./components/ViewBetsComponent.vue').default)
 Vue.component('tennis1-component',require('./components/Tennis1Component.vue').default)
+Vue.component('results-component',require('./components/ResultsComponent.vue').default)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

@@ -1,8 +1,14 @@
-@extends('layouts.baseLayout')
-<!-- contact-us section begin -->
-@section('content')
-<section>
-This is the results controller
+@extends('layouts.app')
+    <body>
+   @section('content')
+
+<div class="row">
+<section style="padding-top:80px">
+<div id="app">
+    <results-component></results-component>
+</div>
 </section>
-@endsection
-    <!-- contact-us section end -->
+</div>
+
+   @endsection
+    </body>
