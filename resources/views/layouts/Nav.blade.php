@@ -38,7 +38,7 @@
                                     <p class="header-left-text">
                                         <span class="header-left-icon">
                                             <i class="icofont-headphone-alt"></i>
-                                        </span><a href="javascript:void()" style="color:white;text-decoration:none" class="inactive">0704922042</a>
+                                        </span><a href="javascript:void()" style="color:white;text-decoration:none" class="inactive">+1(000) 000</a>
                                     </p>
                                 </li>
                                 <li class="header-left-list">

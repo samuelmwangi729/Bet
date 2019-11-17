@@ -39,11 +39,11 @@
         </div>
         @extends('layouts.Footer')
     </body>
-
+{{-- 
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="{{asset('js/app.js')}}"></script>
-<script src="{{ asset('js/appp.js') }}" defer></script>
+<script src="{{ asset('js/appp.js') }}" defer></script> --}}
 
   <!-- plugins:js -->
   <script src="vendors/base/vendor.bundle.base.js"></script>

@@ -1,6 +1,6 @@
 <template>
    <div>
-    <table class="table table-bordered" style="font-size:10px;font-family:courier;background-color:#1b1829;color:white;">
+    <table class="table table-bordered" style="font-family:courier;background-color:#1b1829;color:white;">
        <tr>
            <td>GameId</td>
             <td>Competitors</td>
