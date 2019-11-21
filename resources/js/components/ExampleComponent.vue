@@ -24,9 +24,11 @@
             var self=this;
             var xhr=new XMLHttpRequest();
             var data =xhr.open('GET','http://prematch.lsports.eu/OddService/GetMarkets?username=samuelmwangi729%40gmail.com&password=dfwe43&guid=86943baf-94f0-4dbb-b3c0-9538831e781f');
+            xhr.responseType='application/xml';
             xhr.send();
             xhr.onload=() =>{
-            console.log(xhr.response)
+
+            console.log(xhr.response);
             }
         }
     }
