@@ -1,10 +1,11 @@
 <template>
-   <div>
-    <table class="table table-bordered" style="font-family:courier;background-color:#1b1829;color:white;">
+   <div class="container justify-content-center">
+    <table class="table table-bordered justify-content-center" style="width:auto">
        <tr>
            <td>GameId</td>
             <td>Competitors</td>
             <td>Winner</td>
+            <td>Status</td>
        </tr>
         <tr v-for="fixture in fixtures" :key="fixture.results">
             <td>{{fixture.sport_event.id.split(':')[2]}}</td>
@@ -17,6 +18,9 @@
              <span style="color:red" v-else>
                  {{fixture.sport_event.competitors['1'].name}}
              </span>
+            </tdd
+            <td>
+               {{completed}}
             </td>
             
         </tr>
@@ -30,8 +34,7 @@
             return{
                 fixtures:[],
                 home:[],
-
-
+                completed:'completed',
             }
         },
         mounted() {

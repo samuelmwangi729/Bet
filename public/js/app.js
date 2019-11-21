@@ -2040,11 +2040,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       fixtures: [],
-      home: []
+      home: [],
+      completed: 'completed'
     };
   },
   mounted: function mounted() {
@@ -37928,16 +37933,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "container justify-content-center" }, [
     _c(
       "table",
       {
-        staticClass: "table table-bordered",
-        staticStyle: {
-          "font-family": "courier",
-          "background-color": "#1b1829",
-          color: "white"
-        }
+        staticClass: "table table-bordered justify-content-center",
+        staticStyle: { width: "auto" }
       },
       [
         _vm._m(0),
@@ -37972,7 +37973,9 @@ var render = function() {
                         _vm._s(fixture.sport_event.competitors["1"].name) +
                         "\n          "
                     )
-                  ])
+                  ]),
+              _vm._v(" "),
+              _vm._v("\n            " + _vm._s(_vm.completed) + "\n         ")
             ])
           ])
         })
@@ -37991,7 +37994,9 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("td", [_vm._v("Competitors")]),
       _vm._v(" "),
-      _c("td", [_vm._v("Winner")])
+      _c("td", [_vm._v("Winner")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("Status")])
     ])
   }
 ]
