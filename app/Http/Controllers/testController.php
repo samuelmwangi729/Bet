@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class testController extends Controller
 {
     public function index(){
-        //was to fetch the api data
+        // was to fetch the api data
         // $ch = curl_init();
 
         // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -19,13 +19,12 @@ class testController extends Controller
         //     'league' => 'soccer-europe-europa-league',
         // ];
 
-        // curl_setopt($ch, CURLOPT_URL, 'https://app.oddsapi.io/api/v1/odds?' . http_build_query($data));
+        // curl_setopt($ch, CURLOPT_URL, 'http://prematch.lsports.eu/OddService/GetFixtures?username=samuelmwangi729%40gmail.com&password=dfwe43&guid=86943baf-94f0-4dbb-b3c0-9538831e781f');
 
 
 
         // curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        //     "Content-Type: application/json",
-        //     "apikey: f4b7f540-fa2c-11e9-a8e3-51b3476555d8",
+        //     "Content-Type: application/json"
         // ));
 
         // $response = curl_exec($ch);

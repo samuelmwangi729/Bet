@@ -1,6 +1,6 @@
 <template>
-   <div class="container justify-content-center">
-    <table class="table table-bordered justify-content-center" style="width:auto">
+   <div class="row justify-content-center">
+    <table class="table table-bordered">
        <tr>
            <td>GameId</td>
             <td>Competitors</td>
@@ -18,7 +18,7 @@
              <span style="color:red" v-else>
                  {{fixture.sport_event.competitors['1'].name}}
              </span>
-            </tdd
+            </td>
             <td>
                {{completed}}
             </td>
@@ -40,7 +40,7 @@
         mounted() {
             var self=this;
 
-            axios.get('https://cors-anywhere.herokuapp.com/https://api.sportradar.com/tennis-t2/en/schedules/2016-07-06/results.json?api_key=j9qhevpfbjmyb4xc5qwkayx2')
+            axios.get('https://cors-anywhere.herokuapp.com/https://api.sportradar.com/tennis-t2/en/schedules/2019-11-06/results.json?api_key=j9qhevpfbjmyb4xc5qwkayx2')
             .then(response =>{
                 this.fixtures=response.data.results;
             }).catch(error =>{

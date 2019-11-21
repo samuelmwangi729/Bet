@@ -1896,15 +1896,14 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    var _this = this;
-
     var self = this;
-    axios.get('https://app.oddsapi.io/api/v1/odds?sport=soccer&apikey=b7bac190-06f2-11ea-acf9-650231394a73').then(function (response) {
-      _this.fixtures = response.data;
-      console.log(response.data);
-    })["catch"](function (error) {
-      console.log("Error", error);
-    });
+    var xhr = new XMLHttpRequest();
+    var data = xhr.open('GET', 'http://prematch.lsports.eu/OddService/GetMarkets?username=samuelmwangi729%40gmail.com&password=dfwe43&guid=86943baf-94f0-4dbb-b3c0-9538831e781f');
+    xhr.send();
+
+    xhr.onload = function () {
+      console.log(xhr.response);
+    };
   }
 });
 
@@ -2056,7 +2055,7 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     var self = this;
-    axios.get('https://cors-anywhere.herokuapp.com/https://api.sportradar.com/tennis-t2/en/schedules/2016-07-06/results.json?api_key=j9qhevpfbjmyb4xc5qwkayx2').then(function (response) {
+    axios.get('https://cors-anywhere.herokuapp.com/https://api.sportradar.com/tennis-t2/en/schedules/2019-11-06/results.json?api_key=j9qhevpfbjmyb4xc5qwkayx2').then(function (response) {
       _this.fixtures = response.data.results;
     })["catch"](function (error) {
       console.log("Error", error);
@@ -37632,11 +37631,7 @@ var render = function() {
     },
     _vm._l(_vm.fixtures, function(fixture) {
       return _c("tr", { key: fixture.id }, [
-        _vm._v(
-          "\n         " +
-            _vm._s(fixture.sites["homeaway"]["10bet"]) +
-            "\n         "
-        )
+        _vm._v("\n         " + _vm._s(fixture) + "\n         ")
       ])
     }),
     0
@@ -37933,13 +37928,10 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container justify-content-center" }, [
+  return _c("div", { staticClass: "row justify-content-center" }, [
     _c(
       "table",
-      {
-        staticClass: "table table-bordered justify-content-center",
-        staticStyle: { width: "auto" }
-      },
+      { staticClass: "table table-bordered" },
       [
         _vm._m(0),
         _vm._v(" "),
@@ -37973,8 +37965,10 @@ var render = function() {
                         _vm._s(fixture.sport_event.competitors["1"].name) +
                         "\n          "
                     )
-                  ]),
-              _vm._v(" "),
+                  ])
+            ]),
+            _vm._v(" "),
+            _c("td", [
               _vm._v("\n            " + _vm._s(_vm.completed) + "\n         ")
             ])
           ])
