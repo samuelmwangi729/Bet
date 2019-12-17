@@ -10,6 +10,7 @@
     <title>{{config('app.name')}}</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{{asset('img/favicon.png')}}">
         <!-- Styles -->
         <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">

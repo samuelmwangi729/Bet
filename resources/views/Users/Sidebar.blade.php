@@ -22,13 +22,13 @@
         </div>
       </li> --}}
       <li class="nav-item">
-        <a class="nav-link" href="pages/forms/basic_elements.html">
+        <a class="nav-link" href="#">
           <i class="mdi mdi-view-headline menu-icon" style="color:white;font-weight:bold;" ></i>
         <span class="menu-title" style="color:white;font-weight:bold;">{{config('app.name')}} Affiliate</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/charts/chartjs.html">
+        <a class="nav-link" href="#">
           <i class="mdi mdi-wallet menu-icon" style="color:white;font-weight:bold;"></i>
           <span class="menu-title" style="color:white;font-weight:bold;">Cash Withdrawals</span>
         </a>
@@ -47,17 +47,59 @@
         </a>
         <div class="collapse" id="auth">
           <ul class="nav flex-column sub-menu" style="none">
-            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="pages/samples/login.html"> Transactions History </a></li>
-            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="pages/samples/login-2.html">Update Details </a></li>
-            <li class="nav-item"> <a class="nav-link"  style="color:white;font-weight:bold;"href="pages/samples/register.html"> Manage Password </a></li>
-            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="pages/samples/register-2.html">Messages </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Transactions History </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Update Details </a></li>
+            <li class="nav-item"> <a class="nav-link"  style="color:white;font-weight:bold;"href="#"> Manage Password </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Messages </a></li>
           </ul>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="documentation/documentation.html">
+        <a class="nav-link" href="#">
           <i class="mdi mdi-close menu-icon" style="color:white;font-weight:bold;"></i>
           <span class="menu-title" style="color:white;font-weight:bold;">Delete Account</span>
+        </a>
+      </li>\
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Users</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Payouts</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">All Games</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Add Games</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="fa fa-football menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Suspend Games</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="fa fa-user" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Site Settings</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="fa fa-user" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Payment Methods</span>
         </a>
       </li>
     </ul>
