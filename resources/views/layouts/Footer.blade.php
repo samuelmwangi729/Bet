@@ -1,5 +1,5 @@
 <!-- footer section begin -->
-<footer class="footer-section">
+<footer class="footer-section" style="height:250px">
     <div class="overlay">
 
         <div class="waveWrapper waveAnimation">
