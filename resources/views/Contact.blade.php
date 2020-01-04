@@ -1,4 +1,4 @@
-@extends('layouts.baseLayout')
+@extends('layouts.app')
 <!-- contact-us section begin -->
 @section('content')
 <section class="contact-us-section" id="contact-us-section">
