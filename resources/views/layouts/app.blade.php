@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{config('app.name')}}</title>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
         <!-- Fonts -->
     <link rel="shortcut icon" type="image/png" href="{{asset('img/favicon.png')}}">
         <!-- Styles -->
@@ -24,9 +24,10 @@
         <div class="container">
             @extends('layouts.Nav')
         </div>
-        <div class="container mt-5">
+        <div class="container">
             @yield('content')
         </div>
+        @include('layouts.Footer')
     </body>
 
 </html>

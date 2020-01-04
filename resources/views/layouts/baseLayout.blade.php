@@ -31,12 +31,8 @@
         <!-- Scripts -->
     </head>
     <body>
-        <div class="container">
-                @extends('layouts.Nav')
-        </div>
-        <div class="container mt-5">
-            @yield('content')
-        </div>
+        @extends('layouts.Nav')
+        @yield('content')
         @extends('layouts.Footer')
     </body>
 

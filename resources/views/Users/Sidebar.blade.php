@@ -2,29 +2,11 @@
   <!-- partial:partials/_sidebar.html -->
   <nav class="sidebar sidebar-offcanvas" id="sidebar" style="margin-top:-60px;background-color:#1b1829">
     <ul class="nav">
+      @if(Auth::user()->level=='Administrator')
       <li class="nav-item">
         <a class="nav-link" href="/">
           <i class="mdi mdi-home menu-icon" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">Home</span>
-        </a>
-      </li>
-      {{-- <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-          <i class="mdi mdi-circle-outline menu-icon"></i>
-          <span class="menu-title">UI Elements</span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse" id="ui-basic">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-          </ul>
-        </div>
-      </li> --}}
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="mdi mdi-view-headline menu-icon" style="color:white;font-weight:bold;" ></i>
-        <span class="menu-title" style="color:white;font-weight:bold;">{{config('app.name')}} Affiliate</span>
+          <span class="menu-title" style="color:white;font-weight:bold;">Dashboard</span>{{ Auth::user()->level }}
         </a>
       </li>
       <li class="nav-item">
@@ -37,6 +19,24 @@
         <a class="nav-link" href="/Betslip">
           <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
           <span class="menu-title" style="color:white;font-weight:bold;">All Bets</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">All Games</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="fa fa-user" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Site Settings</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="fa fa-user" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Payment Methods</span>
         </a>
       </li>
       <li class="nav-item">
@@ -59,7 +59,7 @@
           <i class="mdi mdi-close menu-icon" style="color:white;font-weight:bold;"></i>
           <span class="menu-title" style="color:white;font-weight:bold;">Delete Account</span>
         </a>
-      </li>\
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="/Betslip">
           <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
@@ -69,39 +69,127 @@
       <li class="nav-item">
         <a class="nav-link" href="/Betslip">
           <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">Payouts</span>
+          <span class="menu-title" style="color:white;font-weight:bold;">All Bets</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/Betslip">
           <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">All Games</span>
+          <span class="menu-title" style="color:white;font-weight:bold;">Match Book</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/Betslip">
           <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">Add Games</span>
+          <span class="menu-title" style="color:white;font-weight:bold;">Block Market</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-settings menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Clients</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="clients">
+          <ul class="nav flex-column sub-menu" style="none">
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Add Client </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Client List </a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-settings menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Reports</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="clients">
+          <ul class="nav flex-column sub-menu" style="none">
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Account Statement </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Chip Statement </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Profit/Loss </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Max Limit </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Chip Summary </a></li>
+          </ul>
+        </div>
+      </li>
+      @else 
+      {{-- this is where we have to check for the priviledes --}}
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-settings menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Settings</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="auth">
+          <ul class="nav flex-column sub-menu" style="none">
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Transactions History </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Update Details </a></li>
+            <li class="nav-item"> <a class="nav-link"  style="color:white;font-weight:bold;"href="#"> Manage Password </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Messages </a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="mdi mdi-close menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Delete Account</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/Betslip">
-          <i class="fa fa-football menu-icon" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">Suspend Games</span>
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Users</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/Betslip">
-          <i class="fa fa-user" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">Site Settings</span>
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">All Bets</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/Betslip">
-          <i class="fa fa-user" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">Payment Methods</span>
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Match Book</span>
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/Betslip">
+          <i class="mdi mdi-chart-gantt menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Block Market</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-settings menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Clients</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="clients">
+          <ul class="nav flex-column sub-menu" style="none">
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Add Client </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Client List </a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-settings menu-icon" style="color:white;font-weight:bold;"></i>
+          <span class="menu-title" style="color:white;font-weight:bold;">Reports</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="clients">
+          <ul class="nav flex-column sub-menu" style="none">
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Account Statement </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Chip Statement </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Profit/Loss </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Max Limit </a></li>
+            <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Chip Summary </a></li>
+          </ul>
+        </div>
+      </li>
+      @endif
     </ul>
   </nav>
   <!-- partial -->
@@ -155,6 +243,58 @@
                       <small class="mb-1 text-muted">Betslip<sup><span class="badge badge-success" style="border-radius:20px">{{$count}}</span></sup></small>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <hr style="height:20px;font-size:bold">
+              {{-- the tabs start hehe --}}
+              <div class="tab-content py-0 px-0">
+                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                  <div class="d-flex flex-wrap justify-content-xl-between">
+                    <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                      <i class="mdi mdi-flag mr-3 icon-md text-danger"></i>
+                      <div class="d-flex flex-column justify-content-around">
+                        <small class="mb-1 text-muted">In Play</small>
+                        <h5 class="mr-2 mb-0">77</h5>
+                      </div>
+                    </div>
+                    <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                      <i class="mdi mdi-football mr-3 icon-md text-danger"></i>
+                      <div class="d-flex flex-column justify-content-around">
+                        <small class="mb-1 text-muted">Cricket</small>
+                        <h5 class="mr-2 mb-0">7</h5>
+                      </div>
+                    </div>
+                    <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                      <i class="mdi mdi-soccer mr-3 icon-md text-danger"></i>
+                      <div class="d-flex flex-column justify-content-around">
+                        <small class="mb-1 text-muted">Soccer</small>
+                        <h5 class="mr-2 mb-0">10</h5>
+                      </div>
+                    </div>
+                    <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                      <i class="mdi mdi-tennis mr-3 icon-md text-danger"></i>
+                      <div class="d-flex flex-column justify-content-around">
+                        <small class="mb-1 text-muted">Tennis</small>
+                        <h5 class="mr-2 mb-0">50</h5>
+                      </div>
+                    </div>
+                    <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                      <i class="mdi mdi-flag mr-3 icon-md text-danger"></i>
+                      <div class="d-flex flex-column justify-content-around">
+                        <small class="mb-1 text-muted">My Markets</small>
+                        <h5 class="mr-2 mb-0">77</h5>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
+                      <i class="mdi mdi-coins mr-3 icon-md text-danger"></i>
+                      <div class="d-flex flex-column justify-content-around">
+                        <small class="mb-1 text-muted">Current Bets</small>
+                        <h5 class="mr-2 mb-0">7</h5>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>

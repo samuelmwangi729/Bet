@@ -1,82 +1,45 @@
-<!-- footer section begin -->
-<footer class="footer-section" style="height:250px">
-    <div class="overlay">
-
-        <div class="waveWrapper waveAnimation">
-            <div class="waveWrapperInner bgTop">
-                <div class="wave waveTop"></div>
-            </div>
-            <div class="waveWrapperInner bgMiddle">
-                <div class="wave waveMiddle"></div>
-            </div>
-            <div class="waveWrapperInner bgBottom">
-                <div class="wave waveBottom"></div>
+<section id="footer" style="background-color:#4324d9">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            {{-- <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links">
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                </ul>
+            </div> --}}
+            
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5" style="color:white">
+                <ul class="list-unstyled list-inline social text-center" style="color:white">
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="icofont-facebook" style="color:red;font-size:40px"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="icofont-twitter" style="color:red;font-size:40px"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="icofont-pinterest" style="color:red;font-size:40px"></i></a></li>
+                </ul>
             </div>
         </div>
-
-        <div class="footer-content">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-lg-12">
-                        <div class="social-icon">
-                            <ul class="icon-area">
-                                <li class="social-nav">
-                                    <a href="#"><i class="icofont-facebook"></i></a>
-                                </li>
-                                <li class="social-nav">
-                                    <a href="#"><i class="icofont-twitter"></i></a>
-                                </li>
-                                <li class="social-nav">
-                                    <a href="#"><i class="icofont-pinterest"></i></a>
-                                </li>
-                                <li class="social-nav">
-                                    <a href="#"><i class="icofont-rss"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-text">
-                        <h5 class="footer-title">Subscribe to {{config('app.name')}}</h5>
-                            <h2 class="footer-subtitle">To Get Exclusive benefits</h2>
-                        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5" style="color:white">
+               <div class="form-group form-horizontal text-center">
+                   <h2 style="color:red">Please enter your email to subscribe</h2>
+                <div class="input-group mb-3 col-sm-6 offset-md-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1" style="color:red">@</span>
                     </div>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="subscribe">
-                            <input type="email" name="email" placeholder="Your Email Address" class="input-subscribe">
-                            <button class="subscribe-btn">Subscribe</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-5 col-md-12 d-flex justify-content-start reunir-content-center">
-                            <div class="footer-bottom-left">
-                                <p>Copyright © 2019.All Rights Reserved By <a href="#">{{config('app.name')}}</a></p>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-12 d-flex justify-content-end reunir-content-center">
-                            <div class="footer-bottom-right">
-                                <ul>
-                                    <li>
-                                        <a href="#">Privacy & Policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Term Of Service</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Affilate</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">About Us</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <input type="text" class="form-control" placeholder="Email" required aria-label="Username" aria-describedby="basic-addon1"> <button class="btn btn-success">Subscribe</button>
+                  </div>
+                 
             </div>
-        </div>
+        </div>	
+        <div class="row">
+            <div class="col-sm-12 offset-sm-2 text-white">
+                <p><u>{{ config('app.name') }}</u> is a Registered betting website under the Betting and Licencing board of Pakistan.&copy; All right Reversed.<a class="text-green ml-2" style="color:white" href="https://betstarpro.ml" target="_blank">{{ config('app.name') }}</a></p>
+            </div>
+            <hr>
+        </div>	
     </div>
-</footer>
-<!-- footer section end -->
+</section>

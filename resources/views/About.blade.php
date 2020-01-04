@@ -1,4 +1,4 @@
-@extends('layouts.baseLayout')
+@extends('layouts.app')
 <section class="about-section navigation" id="about-section">
         <div class="container" style="padding-top:90px">
             <div class="row">

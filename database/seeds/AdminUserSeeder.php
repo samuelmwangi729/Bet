@@ -13,9 +13,15 @@ class AdminUserSeeder extends Seeder
     {
         App\User::create([
             'name'=>'Web Admin',
-            'email'=>'samuelmwangi729@gmail.com',
-            'password'=>bcrypt('P!@#four5sam'),
+            'email'=>'admin@admin.com',
+            'password'=>bcrypt('1234'),
             'level'=>'Administrator'
+        ]);
+        App\User::create([
+            'name'=>'Sample User',
+            'email'=>'user@user.com',
+            'password'=>bcrypt('1234'),
+            'level'=>'User'
         ]);
     }
 }
