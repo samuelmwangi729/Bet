@@ -98,12 +98,12 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false" aria-controls="auth">
+        <a class="nav-link" data-toggle="collapse" href="#reports" aria-expanded="false" aria-controls="auth">
           <i class="mdi mdi-settings menu-icon" style="color:white;font-weight:bold;"></i>
           <span class="menu-title" style="color:white;font-weight:bold;">Reports</span>
           <i class="menu-arrow"></i>
         </a>
-        <div class="collapse" id="clients">
+        <div class="collapse" id="reports">
           <ul class="nav flex-column sub-menu" style="none">
             <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Account Statement </a></li>
             <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Chip Statement </a></li>
@@ -174,12 +174,12 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#clients" aria-expanded="false" aria-controls="auth">
+        <a class="nav-link" data-toggle="collapse" href="#reports" aria-expanded="false" aria-controls="auth">
           <i class="mdi mdi-settings menu-icon" style="color:white;font-weight:bold;"></i>
           <span class="menu-title" style="color:white;font-weight:bold;">Reports</span>
           <i class="menu-arrow"></i>
         </a>
-        <div class="collapse" id="clients">
+        <div class="collapse" id="reports">
           <ul class="nav flex-column sub-menu" style="none">
             <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#"> Account Statement </a></li>
             <li class="nav-item"> <a class="nav-link" style="color:white;font-weight:bold;" href="#">Chip Statement </a></li>
