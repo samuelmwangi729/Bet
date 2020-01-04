@@ -6,7 +6,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/">
           <i class="mdi mdi-home menu-icon" style="color:white;font-weight:bold;"></i>
-          <span class="menu-title" style="color:white;font-weight:bold;">Dashboard</span>{{ Auth::user()->level }}
+          <span class="menu-title" style="color:white;font-weight:bold;">Dashboard</span>
         </a>
       </li>
       <li class="nav-item">
